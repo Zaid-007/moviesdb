@@ -14,7 +14,6 @@ const App = () => {
     const data = await response.data;
     const value = await data.Search;
     setMovies(value);
-    setIsLoading(false);
   };
 
   useEffect(() => {
