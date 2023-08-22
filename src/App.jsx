@@ -6,18 +6,20 @@ import SearchIcon from './assets/search.svg';
 const API_URL = 'https://www.omdbapi.com/?apikey=9b59d2b3';
 
 const App = () => {
-  const [searchText, setSearchText] = useState('batman');
+  const [searchText, setSearchText] = useState('');
   const [movies, setMovies] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
 
   const searchMovies = async (title) => {
     const response = await axios.get(`${API_URL}&s=${title}`);
     const data = await response.data;
     const value = await data.Search;
     setMovies(value);
+    setIsLoading(false);
   };
 
   useEffect(() => {
-    searchMovies(searchText);
+    searchMovies('avengers');
   }, []);
 
   return (
@@ -38,7 +40,11 @@ const App = () => {
         />
       </div>
 
-      {movies?.length > 0 ? (
+      {isLoading ? (
+        <div className="empty">
+          <h2>Loading ...</h2>
+        </div>
+      ) : movies?.length > 0 ? (
         <div className="container">
           {movies.map((movie) => {
             return <MovieCard {...movie} key={movie.imdbID} />;
