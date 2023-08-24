@@ -1,3 +1,5 @@
+import { memo } from 'react';
+
 const MovieCard = ({ imdbID, Year, Poster, Title, Type }) => {
   return (
     <div className="movie" key={imdbID}>
@@ -20,4 +22,4 @@ const MovieCard = ({ imdbID, Year, Poster, Title, Type }) => {
   );
 };
 
-export default MovieCard;
+export default memo(MovieCard);
