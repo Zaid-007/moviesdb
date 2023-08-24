@@ -1,8 +1,10 @@
-# React + Vite
+# MoviesDekho
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<!-- [![Author - Zaid Marouf](https://img.shields.io/badge/Author-Zaid%20Marouf-blue)](https://github.com/Zaid-007/) -->
 
-Currently, two official plugins are available:
+- The website is developed using React that fetches data using OMDB API giving you a list of movies as requested
+- A simple music web application.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+**Have a look at my website!** 👉🏻👉🏻[ Website Link](https://zaid-moviesdb.netlify.app/)
+
+---
